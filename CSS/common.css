@@ -1,0 +1,221 @@
+.container {
+    margin: 0 auto;
+    width: 1240px;
+}
+
+
+/* 快捷菜单模块：xtx-shortcut */
+
+.xtx-shortcut {
+    height: 52px;
+    background-color: #333;
+}
+
+.xtx-shortcut .container {
+    height: 52px;
+    /* background-color: pink; */
+}
+
+.xtx-shortcut ul li {
+    float: left;
+    /* height: 52px; */
+    line-height: 52px;
+    /* 主要给|设置颜色 */
+    color: #666;
+}
+
+.xtx-shortcut ul a {
+    margin: 0 16px;
+    color: #dcdcdc;
+    font-size: 14px;
+}
+
+
+/* 找到li标签的最后一个中的a标签 */
+
+.xtx-shortcut li:last-child a {
+    margin-right: 0;
+}
+
+.xtx-shortcut li:last-child a::before {
+    content: "";
+    /* 伪元素默认是行内元素，不能直接设置宽高，所以这里改成行内块元素 */
+    display: inline-block;
+    width: 11px;
+    height: 16px;
+    /* 让图片和文字有一个8px的距离 */
+    margin-right: 8px;
+    /* 图片有点靠下，通过margin-top单方面设置一下 */
+    margin-top: -2px;
+    background: url(../images/sprites.png) -160px -70px;
+    /* 设置图片和文字中部对齐 */
+    vertical-align: middle;
+}
+
+
+/* 主导航模块：xtx-main-nav */
+
+.xtx-main-nav {
+    height: 130px;
+    /* background-color: pink; */
+    /* 设置padding-top，但是会出现盒子被撑大，这时要设置自动内减 */
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.xtx-main-nav .logo {
+    width: 207px;
+    height: 70px;
+    margin-left: 25px;
+}
+
+.xtx-main-nav .logo a {
+    /* 将a标签的行内元素设置成块级元素 */
+    display: block;
+    width: 207px;
+    height: 70px;
+    background-image: url(../images/logo.png);
+    background-size: 100% 100%;
+    /* 设置文字的大小为0，这样就开不见文字了 */
+    font-size: 0;
+}
+
+.xtx-main-nav nav {
+    margin-left: 40px;
+}
+
+.xtx-main-nav nav li {
+    float: left;
+    height: 70px;
+    line-height: 70px;
+    margin-right: 48px;
+}
+
+.xtx-main-nav nav a:hover {
+    color: #27ba9b;
+    border-bottom: 1px solid #27ba9b;
+    padding-bottom: 7px;
+}
+
+.xtx-main-nav .search {
+    position: relative;
+    width: 172px;
+    height: 30px;
+    /* background-color: skyblue; */
+    margin-top: 24px;
+    margin-left: 36px;
+}
+
+.xtx-main-nav .search input {
+    width: 172px;
+    height: 30px;
+    border-bottom: 2px solid #e7e7e7;
+    padding-left: 31px;
+}
+
+.xtx-main-nav .search::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background: url(../images/sprites.png) -80px -70px;
+}
+
+.xtx-main-nav .cart {
+    position: relative;
+    width: 23px;
+    height: 23px;
+    /* background-color: red; */
+    margin-top: 28px;
+    margin-left: 15px;
+    background: url(../images/sprites.png) -120px -70px;
+}
+
+.xtx-main-nav .cart span {
+    position: absolute;
+    top: -5px;
+    right: -12px;
+    width: 20px;
+    height: 15px;
+    background-color: #e26237;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+    line-height: 15px;
+}
+
+
+/* 底部模块 */
+
+.xtx-service {
+    height: 174px;
+    background-color: #333;
+}
+
+.xtx-service .container {
+    width: 1393px;
+    height: 173px;
+    border-bottom: 1px solid #434343;
+    /* background-color: pink; */
+}
+
+.xtx-service .container a {
+    float: left;
+    width: 33.3%;
+    height: 173px;
+    /* background-color: blue; */
+    text-align: center;
+    line-height: 173px;
+    font-size: 28px;
+    color: #fff;
+}
+
+.xtx-service .container a::before {
+    content: "";
+    display: inline-block;
+    /* 垂直对齐方式 */
+    vertical-align: middle;
+    margin-right: 19px;
+    width: 58px;
+    height: 58px;
+    background: url(../images/sprites.png) 0px 0px
+}
+
+
+/* nth-child:伪类选择器，::before：伪元素 */
+
+.xtx-service .container a:nth-child(2)::before {
+    background-position: -130px 0;
+}
+
+.xtx-service .container a:nth-child(3)::before {
+    background-position: -65px 0;
+}
+
+
+/* 版权模块 */
+
+.xtx-copyright {
+    height: 168px;
+    background-color: #333;
+}
+
+.xtx-copyright .container {
+    padding-top: 41px;
+    box-sizing: border-box;
+    height: 168px;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+
+.xtx-copyright .container a {
+    color: #999;
+}
+
+.xtx-copyright .container p:first-child {
+    height: 35px;
+}
